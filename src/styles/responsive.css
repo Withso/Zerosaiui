@@ -1,0 +1,302 @@
+/* ================================================
+   Responsive Utilities — Media Queries & Helpers
+   Mobile-first approach with defined breakpoints
+   ================================================ */
+
+/* ——— Base mobile-first styles ——— */
+.responsive-sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 280px;
+  height: 100%;
+  transform: translateX(-100%);
+  transition: transform var(--token-duration-normal) var(--token-ease-default);
+  z-index: var(--token-z-modal);
+  box-shadow: var(--token-shadow-lg);
+}
+
+.responsive-sidebar.open {
+  transform: translateX(0);
+}
+
+.responsive-sidebar-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--token-bg-overlay);
+  z-index: calc(var(--token-z-modal) - 1);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--token-duration-normal) var(--token-ease-default);
+}
+
+.responsive-sidebar-overlay.visible {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.responsive-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 0;
+}
+
+.responsive-hamburger {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  color: var(--token-text-secondary);
+  transition: all var(--token-duration-fast);
+}
+
+.responsive-hamburger:hover {
+  background: var(--token-bg-hover);
+  color: var(--token-text-primary);
+}
+
+.mobile-header {
+  display: flex;
+  align-items: center;
+  gap: var(--token-space-3);
+  padding: var(--token-space-3) var(--token-space-4);
+  border-bottom: 1px solid var(--token-border);
+  background: var(--token-bg);
+  position: sticky;
+  top: 0;
+  z-index: var(--token-z-sticky);
+}
+
+/* ——— Header nav — mobile: horizontal scroll, compact ——— */
+@media (max-width: 767px) {
+  .header-nav-tabs {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .header-nav-tabs::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* DSDetail page — mobile-specific */
+  .ds-detail-root {
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+  }
+  .ds-detail-columns {
+    flex-direction: column !important;
+    flex: none !important;
+  }
+  .ds-detail-left {
+    border-right: none !important;
+    border-bottom: 1px solid var(--token-border) !important;
+    flex: none !important;
+    overflow: visible !important;
+    min-height: 260px !important;
+  }
+  .ds-detail-right {
+    flex: none !important;
+    overflow: visible !important;
+  }
+  .ds-detail-header-padding {
+    padding-left: var(--token-space-4) !important;
+    padding-right: var(--token-space-4) !important;
+  }
+  /* Split preview stacks vertically on mobile */
+  .ds-detail-split-view {
+    flex-direction: column !important;
+  }
+  .ds-detail-split-view > div:first-child {
+    border-right: none !important;
+    border-bottom: 1px solid var(--token-border) !important;
+  }
+}
+
+/* ——— Tablet & up (768px+) ——— */
+@media (min-width: 768px) {
+  .responsive-sidebar {
+    position: sticky;
+    transform: translateX(0);
+    width: 200px;
+    box-shadow: none;
+    border-right: 1px solid var(--token-border);
+  }
+
+  .responsive-sidebar-overlay {
+    display: none;
+  }
+
+  .responsive-hamburger {
+    display: none;
+  }
+
+  .mobile-header {
+    display: none;
+  }
+
+  .responsive-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ——— Desktop (1024px+) ——— */
+@media (min-width: 1024px) {
+  .responsive-sidebar {
+    width: 220px;
+  }
+
+  .responsive-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ——— Large Desktop (1440px+) ——— */
+@media (min-width: 1440px) {
+  .responsive-sidebar {
+    width: 260px;
+  }
+
+  .responsive-grid.large {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ——— Extra Large (1920px+) ——— */
+@media (min-width: 1920px) {
+  .responsive-grid.large {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* ——— Responsive container query utilities ——— */
+.responsive-container {
+  container-type: inline-size;
+  container-name: main;
+}
+
+/* ——— Hide/Show helpers ——— */
+.hide-mobile {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .hide-mobile {
+    display: block;
+  }
+
+  .show-mobile {
+    display: none;
+  }
+}
+
+/* ——— Responsive text sizes ——— */
+@media (max-width: 767px) {
+  .responsive-text-heading {
+    font-size: var(--token-text-base);
+  }
+
+  .responsive-text-subheading {
+    font-size: var(--token-text-sm);
+  }
+
+  .responsive-text-body {
+    font-size: var(--token-text-sm);
+  }
+}
+
+@media (min-width: 768px) {
+  .responsive-text-heading {
+    font-size: var(--token-text-lg);
+  }
+
+  .responsive-text-subheading {
+    font-size: var(--token-text-base);
+  }
+
+  .responsive-text-body {
+    font-size: var(--token-text-base);
+  }
+}
+
+/* ——— Responsive spacing ——— */
+@media (max-width: 767px) {
+  .responsive-padding {
+    padding: var(--token-space-3);
+  }
+
+  .responsive-padding-x {
+    padding-left: var(--token-space-3);
+    padding-right: var(--token-space-3);
+  }
+
+  .responsive-padding-y {
+    padding-top: var(--token-space-3);
+    padding-bottom: var(--token-space-3);
+  }
+
+  .responsive-gap {
+    gap: var(--token-space-2);
+  }
+}
+
+@media (min-width: 768px) {
+  .responsive-padding {
+    padding: var(--token-space-6);
+  }
+
+  .responsive-padding-x {
+    padding-left: var(--token-space-6);
+    padding-right: var(--token-space-6);
+  }
+
+  .responsive-padding-y {
+    padding-top: var(--token-space-6);
+    padding-bottom: var(--token-space-6);
+  }
+
+  .responsive-gap {
+    gap: var(--token-space-4);
+  }
+}
+
+/* ——— DSDetail columns — tablet breakpoint ——— */
+@media (max-width: 1024px) and (min-width: 768px) {
+  .ds-detail-root {
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+  }
+  .ds-detail-columns {
+    flex-direction: column !important;
+    flex: none !important;
+  }
+  .ds-detail-left {
+    border-right: none !important;
+    border-bottom: 1px solid var(--token-border) !important;
+    flex: none !important;
+    overflow: visible !important;
+    min-height: 320px !important;
+  }
+  .ds-detail-right {
+    flex: none !important;
+    overflow: visible !important;
+  }
+}
+
+/* ——— Token section row responsive padding ——— */
+@media (max-width: 767px) {
+  .token-section-row {
+    padding: var(--token-space-3) var(--token-space-4) !important;
+  }
+  .token-section-header {
+    padding: var(--token-space-3) var(--token-space-4) !important;
+  }
+}

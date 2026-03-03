@@ -1,0 +1,643 @@
+/* ============================================
+   AI Components UI Kit — Design Tokens
+   4-Level Token Architecture
+   L1: Raw Values  →  L2: Primitives  →  L3: Semantic  →  L4: Component
+   ============================================ */
+
+/* ═══════════════════════════════════════════════
+   LEVEL 2 — PRIMITIVE PALETTES
+   Raw color scales that form the foundation.
+   These are never used directly in components.
+   ═══════════════════════════════════════════════ */
+:root {
+  /* ── Moonstone (Brand Primary — Pewter Blue / Steel) ── */
+  --moonstone-50: #f1f4f7;    --moonstone-100: #dce3ea;   --moonstone-200: #b7c4d1;
+  --moonstone-300: #8ea3b4;   --moonstone-400: #6b8598;   --moonstone-500: #4f6d80;
+  --moonstone-600: #405a6a;   --moonstone-700: #334855;   --moonstone-800: #283841;
+  --moonstone-900: #1e2b33;   --moonstone-950: #131c22;
+
+  /* ── Sunstone (Secondary — Golden Feldspar / Amber Earth) ── */
+  --sunstone-50: #f8f5ed;   --sunstone-100: #efe6d2;  --sunstone-200: #dccba6;
+  --sunstone-300: #c7ac78;  --sunstone-400: #b29256;  --sunstone-500: #8a6d3b;
+  --sunstone-600: #725a30;  --sunstone-700: #5b4827;  --sunstone-800: #47381f;
+  --sunstone-900: #362b18;  --sunstone-950: #211a10;
+
+  /* ── Olivine (Tertiary — Olive Silicate Green) ── */
+  --olivine-50: #f3f5f0;    --olivine-100: #e4e8dd;   --olivine-200: #c9d1bc;
+  --olivine-300: #a9b597;   --olivine-400: #8a9b77;   --olivine-500: #697459;
+  --olivine-600: #555f48;   --olivine-700: #444c3a;   --olivine-800: #363b2e;
+  --olivine-900: #292e24;   --olivine-950: #181c15;
+
+  /* ── Malachite (Success — Copper-carbonate mineral green) ── */
+  --malachite-50: #edf5f1;   --malachite-100: #d2e8dc;  --malachite-200: #a5d1b9;
+  --malachite-300: #78b896;  --malachite-400: #52a078;  --malachite-500: #3d8b6e;
+  --malachite-600: #2d7a60;  --malachite-700: #226250;  --malachite-800: #1a4c3e;
+  --malachite-900: #13382e;  --malachite-950: #0e211a;
+
+  /* ── Garnet (Error — Deep red silicate mineral) ── */
+  --garnet-50: #f7ecec;     --garnet-100: #f0d8d8;    --garnet-200: #e0b2b2;
+  --garnet-300: #cf8c8c;    --garnet-400: #be6666;    --garnet-500: #b54a4a;
+  --garnet-600: #953d3d;    --garnet-700: #753131;    --garnet-800: #592626;
+  --garnet-900: #401c1c;    --garnet-950: #2a1111;
+
+  /* ── Ochre (Warning — Natural earth pigment amber) ── */
+  --ochre-50: #f5f0e3;     --ochre-100: #ede3c7;    --ochre-200: #dbc693;
+  --ochre-300: #c9a860;    --ochre-400: #b79442;    --ochre-500: #9f8136;
+  --ochre-600: #836a2c;    --ochre-700: #675423;    --ochre-800: #4e3f1b;
+  --ochre-900: #382d14;    --ochre-950: #241e0d;
+
+  /* ── Azurite (Info — Copper-carbonate mineral blue) ── */
+  --azurite-50: #edf2f6;    --azurite-100: #d2e0eb;   --azurite-200: #a5c1d7;
+  --azurite-300: #78a2c3;   --azurite-400: #5287ad;   --azurite-500: #3d7096;
+  --azurite-600: #2d5c7e;   --azurite-700: #224a66;   --azurite-800: #1a394e;
+  --azurite-900: #132a3a;   --azurite-950: #0e1c26;
+
+  /* ── Neutral (Gray Scale) ── */
+  --neutral-0: #ffffff;
+  --neutral-50: #fafafa;   --neutral-100: #f5f5f5;  --neutral-150: #f0f0f0;
+  --neutral-200: #eaeaea;  --neutral-250: #e5e5e5;  --neutral-300: #d1d1d1;
+  --neutral-400: #c4c4c4;  --neutral-500: #8f8f8f;  --neutral-600: #666666;
+  --neutral-700: #3f3f46;  --neutral-750: #3b3b3b;  --neutral-800: #27272a;
+  --neutral-825: #24292e;  --neutral-850: #1c1c1f;  --neutral-875: #18181b;
+  --neutral-900: #141416;  --neutral-925: #111113;  --neutral-950: #0e0e10;
+  --neutral-975: #09090b;  --neutral-1000: #0a0a0a;
+}
+
+/* ═══════════════════════════════════════════════
+   LEVEL 3 — SEMANTIC TOKENS (Light Theme)
+   Purpose-driven tokens referencing L2 primitives.
+   ═══════════════════════════════════════════════ */
+:root {
+  /* ——— Background ——— */
+  --token-bg: #ffffff;
+  --token-bg-secondary: #fafafa;
+  --token-bg-tertiary: #f5f5f5;
+  --token-bg-hover: rgba(0, 0, 0, 0.04);
+  --token-bg-active: rgba(0, 0, 0, 0.06);
+  --token-bg-code: #f4f4f5;
+  --token-bg-inset: #f0f0f0;
+  --token-bg-overlay: rgba(0, 0, 0, 0.5);
+
+  /* ——— Text ——— */
+  --token-text-primary: #0a0a0a;
+  --token-text-secondary: #666666;
+  --token-text-tertiary: #8f8f8f;
+  --token-text-disabled: #c4c4c4;
+  --token-text-inverse: #ffffff;
+  --token-text-code: #24292e;
+
+  /* ——— Border ——— */
+  --token-border: #eaeaea;
+  --token-border-strong: #d1d1d1;
+  --token-border-subtle: #f0f0f0;
+
+  /* ——— Brand: Primary (Moonstone) ——— */
+  --token-accent: #4f6d80;
+  --token-accent-hover: #405a6a;
+  --token-accent-light: #dce3ea;
+  --token-accent-fg: #ffffff;
+  --token-accent-muted: rgba(79, 109, 128, 0.12);
+
+  /* ——— Brand: Secondary (Sunstone) ——— */
+  --token-secondary: #8a6d3b;
+  --token-secondary-hover: #725a30;
+  --token-secondary-light: #efe6d2;
+  --token-secondary-fg: #ffffff;
+
+  /* ——— Brand: Tertiary (Olivine) ——— */
+  --token-tertiary: #697459;
+  --token-tertiary-hover: #555f48;
+  --token-tertiary-light: #e4e8dd;
+  --token-tertiary-fg: #ffffff;
+
+  /* ——— Status Colors ——— */
+  --token-success: #2d7a60;
+  --token-success-light: #d2e8dc;
+  --token-error: #b54a4a;
+  --token-error-light: #f0d8d8;
+  --token-warning: #9f8136;
+  --token-warning-light: #ede3c7;
+  --token-info: #4f6d80;
+  --token-info-light: #dce3ea;
+
+  /* ——— Chat / Conversational ——— */
+  --token-user-bubble: #4f6d80;
+  --token-user-bubble-text: #ffffff;
+  --token-ai-bubble: transparent;
+  --token-ai-bubble-text: #0a0a0a;
+  --token-ai-avatar-bg: #dce3ea;
+  --token-ai-avatar-fg: #4f6d80;
+
+  /* ——— Code Syntax ——— */
+  --token-code-header: #f5f5f5;
+  --token-code-bg: #fafafa;
+  --token-code-text: #24292e;
+  --token-code-keyword: #d73a49;
+  --token-code-string: #032f62;
+  --token-code-comment: #6a737d;
+  --token-code-function: #4f6d80;
+  --token-code-number: #005cc5;
+
+  /* ——— Voice AI ——— */
+  --token-voice-bar: #4f6d80;
+  --token-voice-bar-active: #8a6d3b;
+  --token-voice-bg: #fafafa;
+  --token-voice-progress: #4f6d80;
+  --token-voice-track: #eaeaea;
+
+  /* ——— Research & Analysis ——— */
+  --token-insight-bg: #fafafa;
+  --token-insight-border: #eaeaea;
+  --token-confidence-high: #2d7a60;
+  --token-confidence-medium: #9f8136;
+  --token-confidence-low: #b54a4a;
+  --token-step-done: #697459;
+  --token-step-active: #4f6d80;
+  --token-step-pending: #d1d1d1;
+  --token-step-line: #eaeaea;
+
+  /* ——— Image AI ——— */
+  --token-image-placeholder: #f5f5f5;
+  --token-image-overlay: rgba(0, 0, 0, 0.4);
+  --token-image-selected-ring: #4f6d80;
+
+  /* ——— Chart / Categorical (Mineral Series) ——— */
+  --token-chart-1: #957A7F;   /* Rhodolite — rose-gray garnet */
+  --token-chart-2: #B5836C;   /* Carnelian — warm terracotta */
+  --token-chart-3: #9A9070;   /* Feldspar — golden sandstone */
+  --token-chart-4: #7E909B;   /* Chalcedony — cool blue-gray */
+  --token-chart-5: #849478;   /* Serpentine — sage mineral */
+  --token-chart-6: #A8878F;   /* Tourmaline — dusty mauve */
+
+  /* ——— Spacing ——— */
+  --token-space-0-5: 2px;
+  --token-space-1: 4px;
+  --token-space-1-5: 6px;
+  --token-space-2: 8px;
+  --token-space-2-5: 10px;
+  --token-space-3: 12px;
+  --token-space-4: 16px;
+  --token-space-5: 20px;
+  --token-space-6: 24px;
+  --token-space-7: 28px;
+  --token-space-8: 32px;
+  --token-space-10: 40px;
+  --token-space-12: 48px;
+  --token-space-16: 64px;
+  --token-space-20: 80px;
+  --token-space-24: 96px;
+
+  /* ——— Border Radius ——— */
+  --token-radius-none: 0px;
+  --token-radius-xs: 2px;
+  --token-radius-sm: 4px;
+  --token-radius-md: 6px;
+  --token-radius-lg: 8px;
+  --token-radius-xl: 12px;
+  --token-radius-2xl: 16px;
+  --token-radius-3xl: 24px;
+  --token-radius-full: 9999px;
+
+  /* ——— Typography ——— */
+  --token-font-sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --token-font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Code', 'Courier New', monospace;
+
+  --token-text-2xs: 11px;
+  --token-text-xs: 12px;
+  --token-text-sm: 13px;
+  --token-text-base: 14px;
+  --token-text-md: 15px;
+  --token-text-lg: 16px;
+  --token-text-xl: 18px;
+  --token-text-2xl: 20px;
+  --token-text-3xl: 24px;
+  --token-text-4xl: 32px;
+
+  --token-leading-none: 1;
+  --token-leading-tight: 1.3;
+  --token-leading-normal: 1.5;
+  --token-leading-relaxed: 1.7;
+
+  --token-weight-regular: 400;
+  --token-weight-medium: 500;
+  --token-weight-semibold: 600;
+  --token-weight-bold: 700;
+
+  --token-tracking-tight: -0.02em;
+  --token-tracking-normal: 0em;
+  --token-tracking-wide: 0.02em;
+
+  /* ——— Shadows ——— */
+  --token-shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.04);
+  --token-shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.03);
+  --token-shadow-md: 0 4px 12px rgba(0, 0, 0, 0.06);
+  --token-shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.08);
+  --token-shadow-xl: 0 20px 40px rgba(0, 0, 0, 0.1);
+  --token-shadow-accent: 0 4px 16px rgba(79, 109, 128, 0.15);
+
+  /* ——— Transitions ——— */
+  --token-duration-fast: 120ms;
+  --token-duration-normal: 200ms;
+  --token-duration-slow: 350ms;
+  --token-ease-default: cubic-bezier(0.16, 1, 0.3, 1);
+  --token-ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* ——— Focus & Accessibility ——— */
+  --token-focus-ring: 0 0 0 2px var(--token-bg), 0 0 0 4px var(--token-accent);
+  --token-focus-ring-error: 0 0 0 2px var(--token-bg), 0 0 0 4px var(--token-error);
+  --token-focus-ring-offset: 2px;
+  --token-focus-color: var(--token-accent);
+  --token-min-touch-target: 44px;
+  --token-min-touch-target-sm: 36px;
+
+  /* ——— Z-Index ——— */
+  --token-z-base: 0;
+  --token-z-dropdown: 100;
+  --token-z-sticky: 200;
+  --token-z-modal: 300;
+  --token-z-tooltip: 400;
+
+  /* ——— Responsive Breakpoints ——— */
+  --breakpoint-mobile: 768px;
+  --breakpoint-tablet: 1024px;
+  --breakpoint-desktop: 1440px;
+  --breakpoint-large: 1920px;
+
+  /* ——— Sidebar Widths (Responsive) ——— */
+  --sidebar-width-mobile: 0px;
+  --sidebar-width-tablet: 200px;
+  --sidebar-width-desktop: 220px;
+  --sidebar-width-large: 260px;
+
+  /* ——— Grid Columns (Responsive) ——— */
+  --grid-columns-mobile: 1;
+  --grid-columns-tablet: 2;
+  --grid-columns-desktop: 2;
+  --grid-columns-large: 3;
+}
+
+/* ——— Dark Theme ——— */
+.dark {
+  --token-bg: #09090b;
+  --token-bg-secondary: #111113;
+  --token-bg-tertiary: #18181b;
+  --token-bg-hover: rgba(255, 255, 255, 0.05);
+  --token-bg-active: rgba(255, 255, 255, 0.08);
+  --token-bg-code: #141416;
+  --token-bg-inset: #0e0e10;
+  --token-bg-overlay: rgba(0, 0, 0, 0.7);
+
+  --token-text-primary: #ededed;
+  --token-text-secondary: #a1a1a1;
+  --token-text-tertiary: #707070;
+  --token-text-disabled: #3b3b3b;
+  --token-text-inverse: #09090b;
+  --token-text-code: #e5e5e5;
+
+  --token-border: #27272a;
+  --token-border-strong: #3f3f46;
+  --token-border-subtle: #1c1c1f;
+
+  /* ——— Brand: Primary (Moonstone — dark) ——— */
+  --token-accent: #6b8598;
+  --token-accent-hover: #8ea3b4;
+  --token-accent-light: #131c22;
+  --token-accent-fg: #ffffff;
+  --token-accent-muted: rgba(107, 133, 152, 0.12);
+
+  /* ——— Brand: Secondary (Sunstone — dark) ——— */
+  --token-secondary: #b29256;
+  --token-secondary-hover: #c7ac78;
+  --token-secondary-light: #211a10;
+  --token-secondary-fg: #ffffff;
+
+  /* ——— Brand: Tertiary (Olivine — dark) ——— */
+  --token-tertiary: #8a9b77;
+  --token-tertiary-hover: #a9b597;
+  --token-tertiary-light: #181c15;
+  --token-tertiary-fg: #ffffff;
+
+  --token-success: #6aab8a;
+  --token-success-light: #0e211a;
+  --token-error: #d47272;
+  --token-error-light: #2a1111;
+  --token-warning: #d4aa55;
+  --token-warning-light: #241e0d;
+  --token-info: #6b8598;
+  --token-info-light: #131c22;
+
+  --token-user-bubble: #ededed;
+  --token-user-bubble-text: #09090b;
+  --token-ai-bubble: transparent;
+  --token-ai-bubble-text: #ededed;
+  --token-ai-avatar-bg: #6b8598;
+  --token-ai-avatar-fg: #09090b;
+
+  --token-code-header: #1c1c1f;
+  --token-code-bg: #111113;
+  --token-code-text: #e5e5e5;
+  --token-code-keyword: #ff7b72;
+  --token-code-string: #a5d6ff;
+  --token-code-comment: #8b949e;
+  --token-code-function: #8ea3b4;
+  --token-code-number: #79c0ff;
+
+  /* ——— Voice AI (dark) ——— */
+  --token-voice-bar: #ededed;
+  --token-voice-bar-active: #6b8598;
+  --token-voice-bg: #18181b;
+  --token-voice-progress: #6b8598;
+  --token-voice-track: #2a2a2e;
+
+  /* ——— Research & Analysis (dark) ——— */
+  --token-insight-bg: #111113;
+  --token-insight-border: #27272a;
+  --token-confidence-high: #6aab8a;
+  --token-confidence-medium: #d4aa55;
+  --token-confidence-low: #d47272;
+  --token-step-done: #8a9b77;
+  --token-step-active: #6b8598;
+  --token-step-pending: #3f3f46;
+  --token-step-line: #27272a;
+
+  /* ——— Image AI (dark) ——— */
+  --token-image-placeholder: #1c1c1f;
+  --token-image-overlay: rgba(0, 0, 0, 0.6);
+  --token-image-selected-ring: #6b8598;
+
+  /* ——— Chart / Categorical (Mineral Series — dark) ——— */
+  --token-chart-1: #B3979C;   /* Rhodolite — lighter for dark bg */
+  --token-chart-2: #CFA08A;   /* Carnelian */
+  --token-chart-3: #B5AB8E;   /* Feldspar */
+  --token-chart-4: #9AAFBA;   /* Chalcedony */
+  --token-chart-5: #9FB295;   /* Serpentine */
+  --token-chart-6: #C4A3AB;   /* Tourmaline */
+
+  --token-shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.25);
+  --token-shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.25);
+  --token-shadow-md: 0 4px 12px rgba(0, 0, 0, 0.35);
+  --token-shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.4);
+  --token-shadow-xl: 0 20px 40px rgba(0, 0, 0, 0.5);
+  --token-shadow-accent: 0 4px 16px rgba(107, 133, 152, 0.2);
+}
+
+/* ——— Scoped Theme Overrides (for preview panel isolation) ——— */
+.theme-scope-light {
+  --token-bg: #ffffff;
+  --token-bg-secondary: #fafafa;
+  --token-bg-tertiary: #f5f5f5;
+  --token-bg-hover: rgba(0, 0, 0, 0.04);
+  --token-bg-active: rgba(0, 0, 0, 0.06);
+  --token-bg-code: #f4f4f5;
+  --token-bg-inset: #f0f0f0;
+  --token-bg-overlay: rgba(0, 0, 0, 0.5);
+  --token-text-primary: #0a0a0a;
+  --token-text-secondary: #666666;
+  --token-text-tertiary: #8f8f8f;
+  --token-text-disabled: #c4c4c4;
+  --token-text-inverse: #ffffff;
+  --token-text-code: #24292e;
+  --token-border: #eaeaea;
+  --token-border-strong: #d1d1d1;
+  --token-border-subtle: #f0f0f0;
+  --token-accent: #4f6d80;
+  --token-accent-hover: #405a6a;
+  --token-accent-light: #dce3ea;
+  --token-accent-fg: #ffffff;
+  --token-accent-muted: rgba(79, 109, 128, 0.12);
+  --token-secondary: #8a6d3b;
+  --token-secondary-hover: #725a30;
+  --token-secondary-light: #efe6d2;
+  --token-secondary-fg: #ffffff;
+  --token-tertiary: #697459;
+  --token-tertiary-hover: #555f48;
+  --token-tertiary-light: #e4e8dd;
+  --token-tertiary-fg: #ffffff;
+  --token-success: #2d7a60;
+  --token-success-light: #d2e8dc;
+  --token-error: #b54a4a;
+  --token-error-light: #f0d8d8;
+  --token-warning: #9f8136;
+  --token-warning-light: #ede3c7;
+  --token-info: #4f6d80;
+  --token-info-light: #dce3ea;
+  --token-user-bubble: #4f6d80;
+  --token-user-bubble-text: #ffffff;
+  --token-ai-bubble: transparent;
+  --token-ai-bubble-text: #0a0a0a;
+  --token-ai-avatar-bg: #dce3ea;
+  --token-ai-avatar-fg: #4f6d80;
+  --token-code-header: #f5f5f5;
+  --token-code-bg: #fafafa;
+  --token-code-text: #24292e;
+  --token-code-keyword: #d73a49;
+  --token-code-string: #032f62;
+  --token-code-comment: #6a737d;
+  --token-code-function: #4f6d80;
+  --token-code-number: #005cc5;
+  --token-voice-bar: #4f6d80;
+  --token-voice-bar-active: #8a6d3b;
+  --token-voice-bg: #fafafa;
+  --token-voice-progress: #4f6d80;
+  --token-voice-track: #eaeaea;
+  --token-insight-bg: #fafafa;
+  --token-insight-border: #eaeaea;
+  --token-confidence-high: #2d7a60;
+  --token-confidence-medium: #9f8136;
+  --token-confidence-low: #b54a4a;
+  --token-step-done: #697459;
+  --token-step-active: #4f6d80;
+  --token-step-pending: #d1d1d1;
+  --token-step-line: #eaeaea;
+  --token-image-placeholder: #f5f5f5;
+  --token-image-overlay: rgba(0, 0, 0, 0.4);
+  --token-image-selected-ring: #4f6d80;
+  --token-chart-1: #957A7F;
+  --token-chart-2: #B5836C;
+  --token-chart-3: #9A9070;
+  --token-chart-4: #7E909B;
+  --token-chart-5: #849478;
+  --token-chart-6: #A8878F;
+  --token-shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.04);
+  --token-shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.03);
+  --token-shadow-md: 0 4px 12px rgba(0, 0, 0, 0.06);
+  --token-shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.08);
+  --token-shadow-xl: 0 20px 40px rgba(0, 0, 0, 0.1);
+  --token-shadow-accent: 0 4px 16px rgba(79, 109, 128, 0.15);
+}
+
+.theme-scope-dark {
+  --token-bg: #09090b;
+  --token-bg-secondary: #111113;
+  --token-bg-tertiary: #18181b;
+  --token-bg-hover: rgba(255, 255, 255, 0.05);
+  --token-bg-active: rgba(255, 255, 255, 0.08);
+  --token-bg-code: #141416;
+  --token-bg-inset: #0e0e10;
+  --token-bg-overlay: rgba(0, 0, 0, 0.7);
+  --token-text-primary: #ededed;
+  --token-text-secondary: #a1a1a1;
+  --token-text-tertiary: #707070;
+  --token-text-disabled: #3b3b3b;
+  --token-text-inverse: #09090b;
+  --token-text-code: #e5e5e5;
+  --token-border: #27272a;
+  --token-border-strong: #3f3f46;
+  --token-border-subtle: #1c1c1f;
+  --token-accent: #6b8598;
+  --token-accent-hover: #8ea3b4;
+  --token-accent-light: #131c22;
+  --token-accent-fg: #ffffff;
+  --token-accent-muted: rgba(107, 133, 152, 0.12);
+  --token-secondary: #b29256;
+  --token-secondary-hover: #c7ac78;
+  --token-secondary-light: #211a10;
+  --token-secondary-fg: #ffffff;
+  --token-tertiary: #8a9b77;
+  --token-tertiary-hover: #a9b597;
+  --token-tertiary-light: #181c15;
+  --token-tertiary-fg: #ffffff;
+  --token-success: #6aab8a;
+  --token-success-light: #0e211a;
+  --token-error: #d47272;
+  --token-error-light: #2a1111;
+  --token-warning: #d4aa55;
+  --token-warning-light: #241e0d;
+  --token-info: #6b8598;
+  --token-info-light: #131c22;
+  --token-user-bubble: #ededed;
+  --token-user-bubble-text: #09090b;
+  --token-ai-bubble: transparent;
+  --token-ai-bubble-text: #ededed;
+  --token-ai-avatar-bg: #6b8598;
+  --token-ai-avatar-fg: #09090b;
+  --token-code-header: #1c1c1f;
+  --token-code-bg: #111113;
+  --token-code-text: #e5e5e5;
+  --token-code-keyword: #ff7b72;
+  --token-code-string: #a5d6ff;
+  --token-code-comment: #8b949e;
+  --token-code-function: #8ea3b4;
+  --token-code-number: #79c0ff;
+  --token-voice-bar: #ededed;
+  --token-voice-bar-active: #6b8598;
+  --token-voice-bg: #18181b;
+  --token-voice-progress: #6b8598;
+  --token-voice-track: #2a2a2e;
+  --token-insight-bg: #111113;
+  --token-insight-border: #27272a;
+  --token-confidence-high: #6aab8a;
+  --token-confidence-medium: #d4aa55;
+  --token-confidence-low: #d47272;
+  --token-step-done: #8a9b77;
+  --token-step-active: #6b8598;
+  --token-step-pending: #3f3f46;
+  --token-step-line: #27272a;
+  --token-image-placeholder: #1c1c1f;
+  --token-image-overlay: rgba(0, 0, 0, 0.6);
+  --token-image-selected-ring: #6b8598;
+  --token-chart-1: #B3979C;
+  --token-chart-2: #CFA08A;
+  --token-chart-3: #B5AB8E;
+  --token-chart-4: #9AAFBA;
+  --token-chart-5: #9FB295;
+  --token-chart-6: #C4A3AB;
+  --token-shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.25);
+  --token-shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.25);
+  --token-shadow-md: 0 4px 12px rgba(0, 0, 0, 0.35);
+  --token-shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.4);
+  --token-shadow-xl: 0 20px 40px rgba(0, 0, 0, 0.5);
+  --token-shadow-accent: 0 4px 16px rgba(107, 133, 152, 0.2);
+}
+
+/* ═══════════════════════════════════════════════
+   ANIMATION KEYFRAMES — Used by all DS atoms
+   ═══════════════════════════════════════════════ */
+
+/* Spin — used by Spinner, Button loading, PullIndicator refresh */
+@keyframes token-spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Shimmer — used by Skeleton, Badge indexing, Progress indeterminate, Avatar loading */
+@keyframes token-shimmer {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+/* Pulse — used by Dot pulsing, Badge streaming, Avatar thinking, StepIndicator active */
+@keyframes token-pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.6; transform: scale(0.97); }
+}
+
+/* Bounce — used by StreamingDots */
+@keyframes token-bounce {
+  0%, 80%, 100% { transform: translateY(0); }
+  40% { transform: translateY(-4px); }
+}
+
+/* ═══════════════════════════════════════════════
+   ACCESSIBILITY — Focus, Reduced Motion, High Contrast
+   ═══════════════════════════════════════════════ */
+
+/* Focus-visible ring for all interactive DS components */
+[data-ds-interactive]:focus-visible {
+  outline: none;
+  box-shadow: var(--token-focus-ring);
+}
+
+[data-ds-interactive]:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  [data-ds-interactive],
+  [data-ds-animated] {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* High contrast mode support */
+@media (forced-colors: active) {
+  [data-ds-interactive] {
+    border: 1px solid ButtonText;
+  }
+  [data-ds-interactive]:focus-visible {
+    outline: 2px solid Highlight;
+    outline-offset: 2px;
+  }
+}
+
+/* Screen reader only utility */
+.ds-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Skip to content link (hidden until focused) */
+.ds-skip-link {
+  position: absolute;
+  top: -100%;
+  left: 0;
+  z-index: 9999;
+  padding: 8px 16px;
+  background: var(--token-accent);
+  color: var(--token-accent-fg);
+  font-size: var(--token-text-sm);
+  text-decoration: none;
+  border-radius: 0 0 var(--token-radius-md) 0;
+}
+.ds-skip-link:focus {
+  top: 0;
+}
